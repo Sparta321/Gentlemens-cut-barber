@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | The Gentlemen's Cut</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+body {
+    visibility: hidden;
+}
+  </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="The Gentlemen's Cut Logo" class="site-logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Booking</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="services">
+    <p class="gold-text">WHAT WE OFFER</p>
+    <h1>OUR SERVICES & PRICES</h1>
+    <p class="price-note">Sample prices – subject to confirmation.</p>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1"
+                 alt="Classic haircut">
+            <h3>Classic Haircut</h3>
+            <p>Clean and stylish haircut.</p>
+            <h2>KSh 300</h2>
+            <a href="booking.html" class="cta-button">Book This Service</a>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033"
+                 alt="Skin fade haircut">
+            <h3>Skin Fade</h3>
+            <p>Sharp fades with a clean finish.</p>
+            <h2>KSh 400</h2>
+            <a href="booking.html" class="cta-button">Book This Service</a>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1621607512214-68297480165e"
+                 alt="Beard grooming">
+            <h3>Beard Grooming</h3>
+            <p>Professional beard shaping.</p>
+            <h2>KSh 200</h2>
+            <a href="booking.html" class="cta-button">Book This Service</a>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c"
+                 alt="Haircut and beard grooming">
+            <h3>Haircut & Beard</h3>
+            <p>Complete grooming package.</p>
+            <h2>KSh 500</h2>
+            <a href="booking.html" class="cta-button">Book This Service</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 The Gentlemen's Cut Barber Studio</p>
+    <p>Fresh Cuts. Fresh Confidence.</p>
+    <a href="index.html">Back to Home</a>
+</footer>
+<script>
+function applyTheme(theme) {
+    document.body.classList.toggle("light-mode", theme === "light");
+
+    const button = document.querySelector(".theme-toggle");
+
+    if (button) {
+        button.textContent = theme === "light"
+            ? "🌙 Dark Mode"
+            : "☀️ Light Mode";
+    }
+}
+
+function toggleTheme() {
+    const newTheme = document.body.classList.contains("light-mode")
+        ? "dark"
+        : "light";
+
+    localStorage.setItem("barberTheme", newTheme);
+    applyTheme(newTheme);
+}
+
+applyTheme(localStorage.getItem("barberTheme") || "dark");
+document.body.style.visibility = "visible";
+</script>
+</body>
+</html>

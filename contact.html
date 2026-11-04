@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | The Gentlemen's Cut</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+body {
+    visibility: hidden;
+}
+  </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="The Gentlemen's Cut Logo" class="site-logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Booking</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="contact">
+    <p class="gold-text">GET IN TOUCH</p>
+    <h1>CONTACT OUR BARBERSHOP</h1>
+    <p>We would love to hear from you.</p>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+            <h3>Our Location</h3>
+            <p>Kerugoya, Kirinyaga County, Kenya</p>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=130%2C%20Kerugoya"
+   target="_blank"
+   rel="noopener noreferrer">
+    📍 Find Us / Get Directions
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h3>Opening Hours</h3>
+            <p>Monday - Saturday</p>
+            <p>8:00 AM - 8:00 PM</p>
+            <p>Sunday: 10:00 AM - 6:00 PM</p>
+            <p class="price-note">Sample hours – confirm before publishing.</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Call Us</h3>
+            <p>+254 795 473 423</p>
+            <a href="tel:+254795473423">Call Now</a>
+        </div>
+      <div class="contact-card">
+    <h3>Email Us</h3>
+    <p>muthiinelson012@gmail.com</p>
+    <a href="mailto:muthiinelson012@gmail.com?subject=Barber%20Appointment%20Enquiry">
+        Send Us an Email
+    </a>
+      </div>
+
+    </div>
+
+    <div class="booking-form">
+        <h2>Send Us a Message</h2>
+
+        <form id="contactForm">
+            <label for="contactName">Your Name</label>
+            <input type="text" id="contactName" required>
+
+            <label for="contactPhone">Phone Number</label>
+            <input type="tel" id="contactPhone" required>
+
+            <label for="contactMessage">Your Message</label>
+            <textarea id="contactMessage" required></textarea>
+
+            <button type="submit" class="cta-button">
+                Send Message
+            </button>
+
+            <p id="contactStatus"></p>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 The Gentlemen's Cut Barber Studio</p>
+    <p>Fresh Cuts. Fresh Confidence.</p>
+    <a href="index.html">Back to Home</a>
+</footer>
+
+<script src="script.js"></script>
+  <script>
+function applyTheme(theme) {
+    document.body.classList.toggle("light-mode", theme === "light");
+
+    const button = document.querySelector(".theme-toggle");
+
+    if (button) {
+        button.textContent = theme === "light"
+            ? "🌙 Dark Mode"
+            : "☀️ Light Mode";
+    }
+}
+
+function toggleTheme() {
+    const newTheme = document.body.classList.contains("light-mode")
+        ? "dark"
+        : "light";
+
+    localStorage.setItem("barberTheme", newTheme);
+    applyTheme(newTheme);
+}
+
+applyTheme(localStorage.getItem("barberTheme") || "dark");
+document.body.style.visibility = "visible";
+  </script>
+</body>
+</html>

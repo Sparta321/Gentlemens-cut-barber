@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | The Gentlemen's Cut</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            visibility: hidden;
+        }
+
+        .dashboard {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .dashboard h1,
+        .dashboard h2 {
+            color: #d6a84b;
+        }
+
+        .dashboard-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .dashboard-card {
+            background: #222;
+            color: white;
+            padding: 25px;
+            border: 1px solid #d6a84b;
+            border-radius: 12px;
+        }
+
+        .dashboard-card p {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .demo-warning {
+            padding: 12px;
+            border: 1px solid #d6a84b;
+            margin-top: 20px;
+        }
+
+        body.light-mode .dashboard-card {
+            background: white;
+            color: #222;
+        }
+
+        @media(max-width: 600px) {
+            .dashboard-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>THE GENTLEMEN'S CUT</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <button type="button" onclick="toggleTheme()" class="theme-toggle">
+        ☀️ Light Mode
+    </button>
+</header>
+
+<main class="dashboard">
+    <p class="gold-text">BARBER MANAGEMENT</p>
+    <h1>Admin Dashboard</h1>
+    <p>Welcome to your business overview.</p>
+
+    <div class="demo-warning">
+        DEMO DASHBOARD — Statistics below are sample figures.
+    </div>
+
+    <div class="dashboard-cards">
+        <div class="dashboard-card">
+            <h3>Total Bookings</h3>
+            <p>12</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Pending Enquiries</h3>
+            <p>4</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Available Services</h3>
+            <p>4</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Customer Messages</h3>
+            <p>6</p>
+        </div>
+    </div>
+  
+<section class="dashboard-card" style="margin-top:30px; overflow-x:auto;">
+    <h2>Booking Management</h2>
+    <p>Sample bookings for demonstration only.</p>
+
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+        <tr>
+            <th style="padding:12px; text-align:left;">Customer</th>
+            <th style="padding:12px; text-align:left;">Service</th>
+            <th style="padding:12px; text-align:left;">Date</th>
+            <th style="padding:12px; text-align:left;">Status</th>
+        </tr>
+
+        <tr>
+            <td style="padding:12px;">John (Sample)</td>
+            <td style="padding:12px;">Skin Fade</td>
+            <td style="padding:12px;">Demo date</td>
+            <td>
+    <select class="booking-status">
+        <option>Pending</option>
+        <option>Confirmed</option>
+        <option>Completed</option>
+        <option>Cancelled</option>
+    </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:12px;">Peter (Sample)</td>
+            <td style="padding:12px;">Classic Haircut</td>
+            <td style="padding:12px;">Demo date</td>
+            <td>
+    <select class="booking-status">
+        <option>Pending</option>
+        <option selected>Confirmed</option>
+        <option>Completed</option>
+        <option>Cancelled</option>
+    </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:12px;">Brian (Sample)</td>
+            <td style="padding:12px;">Beard Grooming</td>
+            <td style="padding:12px;">Demo date</td>
+            <td>
+    <select class="booking-status">
+        <option>Pending</option>
+        <option selected>Confirmed</option>
+        <option>Completed</option>
+        <option>Cancelled</option>
+    </select>
+            </td>
+        </tr>
+    </table>
+</section>
+
+<section class="dashboard-card" style="margin-top:30px;">
+    <h2>Customer Enquiries</h2>
+    <p>Sample messages for demonstration only.</p>
+
+    <div style="border-bottom:1px solid #d6a84b; padding:15px 0;">
+        <h3>John (Sample)</h3>
+        <p>Hello, I would like to book a skin fade.</p>
+        <small>Sample enquiry</small>
+    </div>
+
+    <div style="border-bottom:1px solid #d6a84b; padding:15px 0;">
+        <h3>Peter (Sample)</h3>
+        <p>What time do you open tomorrow?</p>
+        <small>Sample enquiry</small>
+    </div>
+
+    <div style="padding:15px 0;">
+        <h3>Brian (Sample)</h3>
+        <p>How much is a haircut and beard trim?</p>
+        <small>Sample enquiry</small>
+    </div>
+</section>
+
+<section class="dashboard-card" style="margin-top:30px;">
+    <h2>Services Management</h2>
+    <p>Edit service names and prices (KSh).</p>
+
+    <label>Classic Haircut</label>
+    <input class="service-name" value="Classic Haircut">
+    <input class="service-price" type="number" value="300">
+
+    <label>Skin Fade</label>
+    <input class="service-name" value="Skin Fade">
+    <input class="service-price" type="number" value="400">
+
+    <label>Beard Grooming</label>
+    <input class="service-name" value="Beard Grooming">
+    <input class="service-price" type="number" value="200">
+
+    <label>Haircut & Beard</label>
+    <input class="service-name" value="Haircut & Beard">
+    <input class="service-price" type="number" value="500">
+
+    <button type="button" onclick="saveServices()"
+        class="theme-toggle">
+        SAVE SERVICES
+    </button>
+
+    <p id="serviceMessage"></p>
+</section>
+
+<script>
+function saveServices() {
+    const names = document.querySelectorAll(".service-name");
+    const prices = document.querySelectorAll(".service-price");
+
+    const services = [];
+
+    for (let i = 0; i < names.length; i++) {
+        if (!names[i].value.trim() ||
+            prices[i].value === "" ||
+            Number(prices[i].value) < 0) {
+            alert("Enter a service name and a valid price.");
+            return;
+        }
+
+        services.push({
+            name: names[i].value.trim(),
+            price: Number(prices[i].value)
+        });
+    }
+
+    localStorage.setItem("barberServices", JSON.stringify(services));
+
+    document.getElementById("serviceMessage").textContent =
+        "Services saved successfully!";
+}
+
+function loadServices() {
+    const saved = localStorage.getItem("barberServices");
+
+    if (!saved) return;
+
+    const services = JSON.parse(saved);
+    const names = document.querySelectorAll(".service-name");
+    const prices = document.querySelectorAll(".service-price");
+
+    services.forEach(function(service, i) {
+        if (names[i] && prices[i]) {
+            names[i].value = service.name;
+            prices[i].value = service.price;
+        }
+    });
+}
+
+loadServices();
+</script>
+
+</main>
+
+<script>
+function applyTheme(theme) {
+    document.body.classList.toggle("light-mode", theme === "light");
+
+    const button = document.querySelector(".theme-toggle");
+
+    if (button) {
+        button.textContent = theme === "light"
+            ? "🌙 Dark Mode"
+            : "☀️ Light Mode";
+    }
+}
+
+function toggleTheme() {
+    const newTheme = document.body.classList.contains("light-mode")
+        ? "dark"
+        : "light";
+
+    localStorage.setItem("barberTheme", newTheme);
+    applyTheme(newTheme);
+}
+
+applyTheme(localStorage.getItem("barberTheme") || "dark");
+document.body.style.visibility = "visible";
+</script>
+
+<script>
+const bookingStatuses = document.querySelectorAll(".booking-status");
+
+bookingStatuses.forEach(function(status, index) {
+    const savedStatus = localStorage.getItem("bookingStatus_" + index);
+
+    if (savedStatus) {
+        status.value = savedStatus;
+    }
+
+    status.addEventListener("change", function() {
+        localStorage.setItem("bookingStatus_" + index, status.value);
+        alert("Booking status updated successfully!");
+    });
+});
+</script>
+
+</body>
+</html>

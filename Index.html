@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111111">
+    <title>Barber in Kerugoya | The Gentlemen's Cut</title>
+  <meta name="description" content="The Gentlemen's Cut Barber Studio in Kerugoya, Kirinyaga County. Discover professional haircuts, skin fades and beard grooming.">
+
+<meta name="keywords" content="Barber Kerugoya, haircut Kerugoya, skin fade Kirinyaga, beard grooming">
+
+<meta name="author" content="The Gentlemen's Cut Barber Studio">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo-container">
+    <img src="logo.png"
+         alt="The Gentlemen's Cut Logo"
+         class="site-logo">
+  </div>
+    <a href="#" class="logo">GENTLEMEN'S<span>CUT.</span></a>
+  
+
+  
+<nav>
+    <a href="./index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Booking</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+    <a href="#booking" class="header-btn">Book Now</a>
+  
+<button type="button" onclick="toggleTheme()" class="theme-toggle">
+    ☀️ Light Mode
+</button>
+
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="gold-text">WELCOME TO THE GENTLEMEN'S CUT</p>
+        <h1>LOOK SHARP.<br>FEEL CONFIDENT.</h1>
+        <p>
+            Professional haircuts, clean fades and beard grooming.
+            Your style, our passion.
+        </p>
+        <a href="#booking" class="main-btn">BOOK YOUR CUT</a>
+    </div>
+</section>
+
+
+<section class="about" id="about">
+    <p class="gold-text">MEET YOUR BARBER</p>
+    <h2>THE ART OF GROOMING</h2>
+
+    <div class="barber-profile">
+        <div class="barber-photo">
+            <img src="barber.jpg" alt="Professional barber">
+        </div>
+
+        <div class="barber-info">
+            <h3>Your Barber's Name</h3>
+            <p class="gold-text">Professional Barber & Stylist</p>
+
+            <p>
+                Welcome to The Gentlemen's Cut.
+                We believe every gentleman deserves
+                a clean haircut and a confident look.
+                Our passion is delivering quality
+                grooming services and excellent customer care.
+            </p>
+
+            <p>Experience: 5+ Years</p>
+            <p>Speciality: Fades, Haircuts & Beard Grooming</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="services" id="services">
+    <p class="gold-text">WHAT WE OFFER</p>
+    <h2>OUR SERVICES & PRICES</h2>
+    <p class="price-note">Sample prices – subject to confirmation.</p>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <h3>Classic Haircut</h3>
+            <p>Clean and stylish haircut.</p>
+            <h2>KSh 300</h2>
+        </div>
+
+        <div class="service-card">
+            <h3>Skin Fade</h3>
+            <p>Sharp fades with a clean finish.</p>
+            <h2>KSh 400</h2>
+        </div>
+
+        <div class="service-card">
+            <h3>Beard Grooming</h3>
+            <p>Professional beard shaping.</p>
+            <h2>KSh 200</h2>
+        </div>
+
+        <div class="service-card">
+            <h3>Haircut & Beard</h3>
+            <p>Complete grooming package.</p>
+            <h2>KSh 500</h2>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+    <p class="gold-text">OUR STYLE COLLECTION</p>
+<h2>SAMPLE HAIRCUT GALLERY</h2>
+<p>Explore some of the haircut styles we aim to deliver.</p>
+
+    <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700"
+             alt="Professional barber shop">
+
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=700"
+             alt="Barber haircut">
+
+        <img src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?w=700"
+             alt="Barber grooming">
+    </div>
+</section>
+
+<section class="cta-section">
+    <p class="gold-text">READY FOR A FRESH LOOK?</p>
+    <h2>YOUR STYLE. YOUR CONFIDENCE.</h2>
+    <p>Get a clean, professional haircut and
+       step out with confidence.</p>
+
+    <a href="https://wa.me/254795473423"
+       target="_blank"
+       rel="noopener"
+       class="cta-button">
+        CONTACT OUR BARBER
+    </a>
+</section>
+
+<section class="booking" id="booking">
+    <p class="gold-text">YOUR NEXT FRESH CUT STARTS HERE</p>
+    <h2>BOOK AN APPOINTMENT</h2>
+
+    <form id="bookingForm">
+
+        <input type="text" id="customerName"
+               placeholder="Your full name" required>
+
+        <input type="tel" id="customerPhone"
+               placeholder="Your phone number" required>
+
+        <select id="service" required>
+            <option value="">Choose a service</option>
+            <option>Classic Haircut - KSh 200</option>
+            <option>Skin Fade - KSh 300</option>
+            <option>Beard Grooming - KSh 150</option>
+            <option>Haircut + Beard - KSh 400</option>
+        </select>
+
+        <label for="bookingDate">Preferred date</label>
+        <input type="date" id="bookingDate" required>
+
+        <label for="bookingTime">Preferred time</label>
+        <input type="time" id="bookingTime" required>
+
+        <textarea id="notes"
+                  placeholder="Additional instructions (optional)"></textarea>
+
+        <button type="submit" class="main-btn">
+    BOOK THROUGH WHATSAPP
+</button>
+
+<a id="whatsappLink"
+   href="#"
+   target="_blank"
+   rel="noopener"
+   style="display:none; color:#d6a84b; margin-top:15px;">
+   TAP HERE TO OPEN WHATSAPP
+</a>
+
+    </form>
+
+    <p id="bookingStatus"></p>
+</section>
+
+<section class="reviews" id="reviews">
+    <p class="gold-text">CLIENT FEEDBACK</p>
+    <h2>WHAT OUR CLIENTS SAY</h2>
+
+    <div class="review-grid">
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Clean cuts and excellent customer service."</p>
+            <h3>James K.</h3>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"One of the best grooming experiences."</p>
+            <h3>Brian M.</h3>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Professional barber with great attention to detail."</p>
+            <h3>Kevin T.</h3>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <p class="gold-text">GET IN TOUCH</p>
+    <h2>VISIT OUR BARBERSHOP</h2>
+
+    <div class="contact-grid">
+        <div class="contact-card">
+            <h3>Our Location</h3>
+            <p>Kerugoya, Kirinyaga County, Kenya</p>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Kerugoya%2C+Kirinyaga+County%2C+Kenya"
+target="_blank">
+    Find Us on Google Maps
+</a>
+        </div>
+
+        <div class="contact-card">
+            <h3>Opening Hours</h3>
+            <p>Monday - Saturday: 8:00 AM - 8:00 PM</p>
+            <p>Sunday: 10:00 AM - 6:00 PM</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Call Us</h3>
+            <p>+254 795 473 423</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <h3>GENTLEMEN'S CUT.</h3>
+    <p>Fresh Cuts. Fresh Confidence.</p>
+    <p>© 2026 The Gentlemen's Cut Barber Studio.</p>
+</footer>
+
+<script src="script.js"></script>
+  
+<a href="https://wa.me/254795473423?text=Hello%2C%20I%20am%20interested%20in%20your%20barber%20services."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener">
+    WhatsApp Us
+</a>
+<script src="script.js"></script>
+  
+
+<script>
+function applyTheme(theme) {
+    document.body.classList.toggle("light-mode", theme === "light");
+
+    const button = document.querySelector(".theme-toggle");
+
+    if (button) {
+        button.textContent = theme === "light"
+            ? "🌙 Dark Mode"
+            : "☀️ Light Mode";
+    }
+}
+
+function toggleTheme() {
+    const newTheme = document.body.classList.contains("light-mode")
+        ? "dark"
+        : "light";
+
+    localStorage.setItem("barberTheme", newTheme);
+    applyTheme(newTheme);
+}
+
+applyTheme(localStorage.getItem("barberTheme") || "dark");
+</script>
+
+
+</body>
+</html>

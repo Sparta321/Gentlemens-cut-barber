@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator | The Gentlemen's Cut</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+body {
+    visibility: hidden;
+}
+  </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="The Gentlemen's Cut Logo" class="site-logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Booking</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="calculator.html">Price Calculator</a>
+    </nav>
+</header>
+
+<section class="booking-section">
+    <p class="gold-text">PLAN YOUR GROOMING</p>
+    <h1>PRICE CALCULATOR</h1>
+    <p>Select your preferred services to calculate the estimated cost.</p>
+
+    <div class="booking-form">
+
+        <label>
+            <input type="checkbox" class="price-service" value="300">
+            Classic Haircut — KSh 300
+        </label>
+
+        <label>
+            <input type="checkbox" class="price-service" value="400">
+            Skin Fade — KSh 400
+        </label>
+
+        <label>
+            <input type="checkbox" class="price-service" value="200">
+            Beard Grooming — KSh 200
+        </label>
+
+        <label>
+            <input type="checkbox" class="price-service" value="500">
+            Haircut & Beard — KSh 500
+        </label>
+
+        <h2 class="gold-text">
+            Estimated Total: KSh <span id="totalPrice">0</span>
+        </h2>
+
+        <p class="price-note">
+            Sample prices only. Actual prices must be confirmed.
+        </p>
+
+        <a href="booking.html" class="cta-button">
+            Continue to Booking
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 The Gentlemen's Cut Barber Studio</p>
+    <p>Fresh Cuts. Fresh Confidence.</p>
+    <a href="index.html">Back to Home</a>
+</footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const services = document.querySelectorAll(".price-service");
+    const totalDisplay = document.getElementById("totalPrice");
+
+    function calculateTotal() {
+        let total = 0;
+
+        services.forEach(function(service) {
+            if (service.checked) {
+                total += Number(service.value);
+            }
+        });
+
+        totalDisplay.textContent = total;
+    }
+
+    services.forEach(function(service) {
+        service.addEventListener("change", calculateTotal);
+    });
+
+});
+</script>
+</body>
+</html>
+<script>
+function applyTheme(theme) {
+    document.body.classList.toggle("light-mode", theme === "light");
+
+    const button = document.querySelector(".theme-toggle");
+
+    if (button) {
+        button.textContent = theme === "light"
+            ? "🌙 Dark Mode"
+            : "☀️ Light Mode";
+    }
+}
+
+function toggleTheme() {
+    const newTheme = document.body.classList.contains("light-mode")
+        ? "dark"
+        : "light";
+
+    localStorage.setItem("barberTheme", newTheme);
+    applyTheme(newTheme);
+}
+
+applyTheme(localStorage.getItem("barberTheme") || "dark");
+document.body.style.visibility = "visible";
+</script>
+</body>
+</html>

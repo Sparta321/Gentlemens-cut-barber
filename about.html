@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | The Gentlemen's Cut</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+body {
+    visibility: hidden;
+}
+  </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="The Gentlemen's Cut Logo" class="site-logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Booking</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="about">
+    <p class="gold-text">WHO WE ARE</p>
+    <h1>ABOUT THE GENTLEMEN'S CUT</h1>
+
+    <div class="about-content">
+        <div>
+            <img src="barber.jpg" alt="Sample professional barber">
+        </div>
+
+        <div>
+            <h2>MORE THAN JUST A HAIRCUT</h2>
+            <p>
+                Welcome to The Gentlemen's Cut Barber Studio.
+                We believe every gentleman deserves a clean
+                haircut, excellent grooming and a confident look.
+            </p>
+
+            <p>
+                Our goal is to provide quality barbering services
+                in a welcoming and professional environment.
+            </p>
+
+            <h3>OUR SPECIALITIES</h3>
+            <ul>
+                <li>Classic Haircuts</li>
+                <li>Modern Skin Fades</li>
+                <li>Beard Grooming</li>
+                <li>Complete Grooming</li>
+            </ul>
+
+            <a href="booking.html" class="cta-button">
+                Book an Appointment
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 The Gentlemen's Cut Barber Studio</p>
+    <p>Fresh Cuts. Fresh Confidence.</p>
+    <a href="index.html">Back to Home</a>
+</footer>
+<script>
+function applyTheme(theme) {
+    document.body.classList.toggle("light-mode", theme === "light");
+
+    const button = document.querySelector(".theme-toggle");
+
+    if (button) {
+        button.textContent = theme === "light"
+            ? "🌙 Dark Mode"
+            : "☀️ Light Mode";
+    }
+}
+
+function toggleTheme() {
+    const newTheme = document.body.classList.contains("light-mode")
+        ? "dark"
+        : "light";
+
+    localStorage.setItem("barberTheme", newTheme);
+    applyTheme(newTheme);
+}
+
+applyTheme(localStorage.getItem("barberTheme") || "dark");
+document.body.style.visibility = "visible";
+</script>
+</body>
+</html>

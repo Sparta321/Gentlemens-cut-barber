@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | The Gentlemen's Cut</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+body {
+    visibility: hidden;
+}
+  </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="The Gentlemen's Cut Logo" class="site-logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Booking</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="reviews">
+    <p class="gold-text">CUSTOMER FEEDBACK</p>
+    <h1>WHAT PEOPLE SAY</h1>
+
+    <p class="price-note">
+        Example testimonials for demonstration only.
+        Replace with genuine customer feedback before publishing.
+    </p>
+
+    <div class="review-grid">
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Clean cuts and excellent customer service."</p>
+            <h3>Sample Customer 1</h3>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"A fresh look and a comfortable grooming experience."</p>
+            <h3>Sample Customer 2</h3>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Professional attention to detail."</p>
+            <h3>Sample Customer 3</h3>
+        </div>
+
+    </div>
+
+    <a href="booking.html" class="cta-button">
+        Book Your Appointment
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 The Gentlemen's Cut Barber Studio</p>
+    <p>Fresh Cuts. Fresh Confidence.</p>
+    <a href="index.html">Back to Home</a>
+</footer>
+<script>
+function applyTheme(theme) {
+    document.body.classList.toggle("light-mode", theme === "light");
+
+    const button = document.querySelector(".theme-toggle");
+
+    if (button) {
+        button.textContent = theme === "light"
+            ? "🌙 Dark Mode"
+            : "☀️ Light Mode";
+    }
+}
+
+function toggleTheme() {
+    const newTheme = document.body.classList.contains("light-mode")
+        ? "dark"
+        : "light";
+
+    localStorage.setItem("barberTheme", newTheme);
+    applyTheme(newTheme);
+}
+
+applyTheme(localStorage.getItem("barberTheme") || "dark");
+document.body.style.visibility = "visible";
+  </script>
+</body>
+</html>

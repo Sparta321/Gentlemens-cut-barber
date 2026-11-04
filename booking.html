@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | The Gentlemen's Cut</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+body {
+    visibility: hidden;
+}
+  </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="The Gentlemen's Cut Logo" class="site-logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Booking</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="booking-section">
+    <p class="gold-text">RESERVE YOUR SLOT</p>
+    <h1>BOOK AN APPOINTMENT</h1>
+    <p>Fill in your details to request a booking.</p>
+
+    <form id="bookingForm" class="booking-form">
+
+        <label for="customerName">Your Full Name</label>
+        <input type="text" id="customerName" required>
+
+        <label for="customerPhone">Phone Number</label>
+        <input type="tel" id="customerPhone" placeholder="07XXXXXXXX" required>
+
+        <label for="service">Choose a Service</label>
+        <select id="service" required>
+            <option value="">Select Service</option>
+            <option value="Classic Haircut - KSh 300">Classic Haircut - KSh 300</option>
+            <option value="Skin Fade - KSh 400">Skin Fade - KSh 400</option>
+            <option value="Beard Grooming - KSh 200">Beard Grooming - KSh 200</option>
+            <option value="Haircut & Beard - KSh 500">Haircut & Beard - KSh 500</option>
+        </select>
+
+        <label for="bookingDate">Preferred Date</label>
+        <input type="date" id="bookingDate" required>
+
+        <label for="bookingTime">Preferred Time</label>
+        <input type="time" id="bookingTime" required>
+
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" placeholder="Any special haircut instructions?"></textarea>
+
+        <button type="submit" class="cta-button">Submit Booking Request</button>
+
+        <p id="bookingMessage"></p>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 The Gentlemen's Cut Barber Studio</p>
+    <p>Fresh Cuts. Fresh Confidence.</p>
+    <a href="index.html">Back to Home</a>
+</footer>
+
+<script src="script.js"></script>
+  <script>
+function applyTheme(theme) {
+    document.body.classList.toggle("light-mode", theme === "light");
+
+    const button = document.querySelector(".theme-toggle");
+
+    if (button) {
+        button.textContent = theme === "light"
+            ? "🌙 Dark Mode"
+            : "☀️ Light Mode";
+    }
+}
+
+function toggleTheme() {
+    const newTheme = document.body.classList.contains("light-mode")
+        ? "dark"
+        : "light";
+
+    localStorage.setItem("barberTheme", newTheme);
+    applyTheme(newTheme);
+}
+
+applyTheme(localStorage.getItem("barberTheme") || "dark");
+document.body.style.visibility = "visible";
+  </script>
+</body>
+</html>
